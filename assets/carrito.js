@@ -52,3 +52,20 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("mi-carrito-container").appendChild(finalizarBtn);
     }
 });
+
+//Bloque para obtener los datos del API productos
+/*
+fetch('/wp-json/mi-carrito/v1/productos')
+  .then(res => res.json())
+  .then(productos => {
+    // transformar los datos si es necesario y renderizar
+    const carritoData = productos.map(p => ({
+      id: p.id,
+      nombre: p.name,
+      precio: parseFloat(p.price),
+      cantidad: 1
+    }));
+    iniciarCarrito(carritoData);
+  })
+  .catch(err => console.error('Error cargando productos:', err));
+*/
