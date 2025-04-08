@@ -7,7 +7,7 @@ use Automattic\WooCommerce\Client;
 use WP_REST_Request;
 use WP_Error;
 
-//  Requiere WooCommerce REST API y claves definidas en wp-config.php o directamente aquí.
+// 🔐 Requiere WooCommerce REST API y claves definidas en wp-config.php o directamente aquí.
 define('WOOCOMMERCE_CONSUMER_KEY', 'TU_CONSUMER_KEY'); // Reemplazar
 define('WOOCOMMERCE_CONSUMER_SECRET', 'TU_CONSUMER_SECRET'); // Reemplazar
 
@@ -20,7 +20,7 @@ add_action('rest_api_init', function () {
     ]);
 });
 
-//  Callback que consulta WooCommerce y retorna productos
+// 🔄 Callback que consulta WooCommerce y retorna productos
 function obtener_productos_woocommerce(WP_REST_Request $request) {
     $limit = $request->get_param('limit') ?: 10;
 
